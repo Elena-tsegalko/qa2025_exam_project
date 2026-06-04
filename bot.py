@@ -31,8 +31,21 @@ async def run_api_test(update: Update, context: ContextTypes.DEFAULT_TYPE):
     result = await execute_command('pytest -s -v tests/api/ --alluredir=./results', update)
 
     short_result = '\n'. join([line for line in result.split('\n') if "FAILD" in line or "ERROR" in line])
-    await update.message.reply_text(f"Результат тeстов\n{short_result[:3000]}" if short_result else  "Все тесты прошли успешно")
+    await update.message.reply_text(f"Результат тeстов\n{short_result[:3000]}" if short_result else "Все тесты прошли успешно")
 
+
+async def run_ui_test(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text('Запуск UI тестов (Header)')
+    results_dir = Path("./results")
+    results_dir.mkdir(exist_ok=True)
+
+    for file in results_dir.glob("*"):
+        file.unlink()
+
+    result = await execute_command('pytest -s -v tests/ui/test_header.py --alluredir=./results', update)
+
+    short_result = '\n'.join([line for line in result.split('\n') if "FAILED" in line or "ERROR" in line])
+    await update.message.reply_text(f"Результат UI тестов:\n{short_result[:3000]}" if short_result else "Все UI тесты прошли успешно")
 
 async def help_command2(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text("Как у вас дела!13213213")
@@ -47,6 +60,7 @@ def main() -> None:
     application.add_handler(CommandHandler("test2", help_command2))
     application.add_handler(CommandHandler("test1", help_command1))
     application.add_handler(CommandHandler("run_api_test", run_api_test))
+    application.add_handler(CommandHandler("run_ui_test", run_ui_test))
     application.run_polling(allowed_updates=Update.ALL_TYPES)
 
 
