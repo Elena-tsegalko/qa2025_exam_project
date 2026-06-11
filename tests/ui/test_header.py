@@ -1,6 +1,7 @@
 import allure
 import time
 
+from conftest import driver
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver import ActionChains

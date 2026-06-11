@@ -1,5 +1,5 @@
 from locators.main_locators import MainPage
-from conftest import driver
+
 
 def test_missha(driver):
     page = MainPage(driver)
