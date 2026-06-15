@@ -10,11 +10,22 @@ class MainPage(WebPage):
         super().__init__(web_driver, url)
 
     btn_catalog = WebElement(xpath='//*[@class="page-footer-menu"]//a[@href="/about/opt/"]')
-    header_logo = WebElement(xpath="//header//a[contains(@class, 'logo')]")
+
+    header_logo = WebElement(xpath="//a[contains(@class, 'page-header-logo')]")
+    header_search = WebElement(xpath="//input[contains(@class, 'field-input--search')]")
+    header_delivery = WebElement(xpath='//a[@title="Доставка и оплата"]')
     header_shops = WebElement(xpath='//a[@title="Магазины"]')
-    header_delivery = WebElement(xpath="(//header//a[contains(text(), 'Доставка и оплата')])")
-    header_cart = WebElement(xpath="//header//a[contains(@href, 'cart') or contains(@class, 'cart')]")
-    footer_instagram = WebElement(xpath="//footer//a[contains(@href, 'instagram.com')]")
-    footer_oferta = WebElement(xpath="//footer//a[contains(@href, 'oferta')]")
-    footer_about = WebElement(xpath="//footer//a[contains(@href, 'about') or contains(text(), 'О компании')]")
+    header_user = WebElement(xpath="//button[contains(@class, 'user-login__toggle')]")
+    header_favorites = WebElement(xpath="//a[@href='/favorite/']")
+    header_cart = WebElement(xpath="//a[@href='/order/']")
+
+    footer_logo = WebElement(xpath="//a[contains(@class, 'page-header-logo--footer')]")
+    footer_subscribe_input = WebElement(xpath="//input[contains(@class, 'field-input--email')]")
+    footer_subscribe_btn = WebElement(xpath="//button[contains(@class, 'subscription-form__btn')]")
+    footer_phone = WebElement(xpath="//a[contains(@href, 'tel:')]")
+
+    footer_about_company = WebElement(xpath='//a[@href="/about/company/"]')
+    footer_oferta = WebElement(xpath='//a[@href="/about/terms/"]')
+    footer_contacts = WebElement(xpath='//a[@href="/about/contacts/"]')
+    footer_delivery = WebElement(xpath='//a[@href="/buyers/delivery-payment/"]')
 
