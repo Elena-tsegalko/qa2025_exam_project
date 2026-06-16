@@ -9,7 +9,7 @@ class MainPage(WebPage):
 
         super().__init__(web_driver, url)
 
-    btn_catalog = WebElement(xpath='//*[@class="page-footer-menu"]//a[@href="/about/opt/"]')
+    btn_catalog = WebElement(xpath='//a[@href="/about/opt/"]')
 
     header_logo = WebElement(xpath="//a[contains(@class, 'page-header-logo')]")
     header_search = WebElement(xpath="//input[contains(@class, 'field-input--search')]")
