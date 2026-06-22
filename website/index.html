@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Елена | QA-тестировщик</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="nav">
+        <div class="nav-brand">✦ EL</div>
+        <div class="nav-links">
+            <a href="#hero" class="nav-link">◈ Главная</a>
+            <a href="#about" class="nav-link">◇ Обо мне</a>
+            <a href="#skills" class="nav-link">◆ Навыки</a>
+            <a href="#tests" class="nav-link">⬡ Тесты</a>
+            <a href="#contact" class="nav-link">◉ Контакты</a>
+        </div>
+        <button class="nav-toggle" onclick="toggleNav()">☰</button>
+    </nav>
+
+    <!-- Герой секция -->
+    <section id="hero" class="hero">
+        <div class="hero-bg">
+            <div class="grid-overlay"></div>
+            <div class="floating-shapes">
+                <div class="shape shape-1">⬡</div>
+                <div class="shape shape-2">◈</div>
+                <div class="shape shape-3">◇</div>
+                <div class="shape shape-4">✦</div>
+                <div class="shape shape-5">◆</div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">✧ QA-ТЕСТИРОВЩИК ✧</div>
+            <h1 class="hero-title">
+                <span class="greeting">Привет, я</span>
+                <span class="name">Елена</span>
+            </h1>
+            <p class="hero-subtitle">Начинающий тестировщик ПО · Выпускница курсов тестирования</p>
+            <div class="hero-cta">
+                <a href="#tests" class="btn btn-primary">⬡ Запустить тесты</a>
+                <a href="#contact" class="btn btn-secondary">◈ Связаться</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" data-count="107">0</span>
+                    <span class="stat-label">Тестов</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="3">0</span>
+                    <span class="stat-label">Типа тестов</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="10">0</span>
+                    <span class="stat-label">Сценариев</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>▾</span>
+        </div>
+    </section>
+
+    <!-- Обо мне -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title">◇ Обо мне</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-icon">✧</div>
+                    <h3>Образование</h3>
+                    <p>Успешно завершила курсы тестирования ПО. Освоила основы ручного и автоматизированного тестирования.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">⬡</div>
+                    <h3>Навыки</h3>
+                    <p>Владею Python, Selenium, pytest, Allure. Понимаю принципы ООП и Page Object Model.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">◈</div>
+                    <h3>Подход</h3>
+                    <p>Стремлюсь к созданию надёжных и поддерживаемых тестов. Внимательна к деталям.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Навыки -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <h2 class="section-title">◆ Навыки</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <div class="skill-icon">◈</div>
+                    <span class="skill-name">Python</span>
+                    <div class="skill-bar"><div class="skill-progress" data-progress="75"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">◇</div>
+                    <span class="skill-name">Selenium</span>
+                    <div class="skill-bar"><div class="skill-progress" data-progress="70"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">⬡</div>
+                    <span class="skill-name">pytest</span>
+                    <div class="skill-bar"><div class="skill-progress" data-progress="80"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">✦</div>
+                    <span class="skill-name">Allure</span>
+                    <div class="skill-bar"><div class="skill-progress" data-progress="65"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">◆</div>
+                    <span class="skill-name">API тестирование</span>
+                    <div class="skill-bar"><div class="skill-progress" data-progress="60"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">✧</div>
+                    <span class="skill-name">Git</span>
+                    <div class="skill-bar"><div class="skill-progress" data-progress="70"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Тесты -->
+    <section id="tests" class="section tests">
+        <div class="container">
+            <h2 class="section-title">⬡ Конструктор тестов</h2>
+            <p class="section-subtitle">Выберите типы тестов и настройки для запуска</p>
+            
+            <div class="test-constructor">
+                <!-- API тесты -->
+                <div class="test-group">
+                    <div class="test-group-header">
+                        <input type="checkbox" id="api-tests" class="test-checkbox" onchange="updateTestConfig()">
+                        <label for="api-tests" class="test-group-title">
+                            <span class="test-icon">◈</span> API-тесты
+                        </label>
+                        <span class="test-count">28 тестов</span>
+                    </div>
+                    <div class="test-options" id="api-options">
+                        <div class="test-option">
+                            <input type="checkbox" id="api-get" class="option-checkbox" checked onchange="updateTestConfig()">
+                            <label for="api-get">GET-запросы</label>
+                        </div>
+                        <div class="test-option">
+                            <input type="checkbox" id="api-post" class="option-checkbox" checked onchange="updateTestConfig()">
+                            <label for="api-post">POST-запросы</label>
+                        </div>
+                        <div class="test-option">
+                            <input type="checkbox" id="api-put" class="option-checkbox" onchange="updateTestConfig()">
+                            <label for="api-put">PUT-запросы</label>
+                        </div>
+                        <div class="test-option">
+                            <input type="checkbox" id="api-delete" class="option-checkbox" onchange="updateTestConfig()">
+                            <label for="api-delete">DELETE-запросы</label>
+                        </div>
+                        <div class="test-option">
+                            <input type="checkbox" id="api-performance" class="option-checkbox" checked onchange="updateTestConfig()">
+                            <label for="api-performance">Производительность</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- UI тесты -->
+                <div class="test-group">
+                    <div class="test-group-header">
+                        <input type="checkbox" id="ui-tests" class="test-checkbox" onchange="updateTestConfig()">
+                        <label for="ui-tests" class="test-group-title">
+                            <span class="test-icon">◇</span> UI-тесты
+                        </label>
+                        <span class="test-count">62 теста</span>
+                    </div>
+                    <div class="test-options" id="ui-options">
+                        <div class="test-option">
+                            <input type="checkbox" id="ui-click" class="option-checkbox" checked onchange="updateTestConfig()">
+                            <label for="ui-click">Кликабельность</label>
+                        </div>
+                        <div class="test-option">
+                            <input type="checkbox" id="ui-display" class="option-checkbox" checked onchange="updateTestConfig()">
+                            <label for="ui-display">Отображение</label>
+                        </div>
+                        <div class="test-option">
+                            <input type="checkbox" id="ui-spelling" class="option-checkbox" checked onchange="updateTestConfig()">
+                            <label for="ui-spelling">Орфография</label>
+                        </div>
+                        <div class="test-option">
+                            <input type="checkbox" id="ui-business" class="option-checkbox" checked onchange="updateTestConfig()">
+                            <label for="ui-business">Бизнес-сценарии</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Нагрузочные тесты -->
+                <div class="test-group">
+                    <div class="test-group-header">
+                        <input type="checkbox" id="load-tests" class="test-checkbox" onchange="updateTestConfig()">
+                        <label for="load-tests" class="test-group-title">
+                            <span class="test-icon">✦</span> Нагрузочные тесты
+                        </label>
+                        <span class="test-count">8 тестов</span>
+                    </div>
+                    <div class="test-options" id="load-options">
+                        <div class="test-option">
+                            <input type="checkbox" id="load-concurrent" class="option-checkbox" checked onchange="updateTestConfig()">
+                            <label for="load-concurrent">Параллельные запросы</label>
+                        </div>
+                        <div class="test-option">
+                            <input type="checkbox" id="load-stress" class="option-checkbox" onchange="updateTestConfig()">
+                            <label for="load-stress">Стресс-тесты</label>
+                        </div>
+                        <div class="test-option">
+                            <input type="checkbox" id="load-performance" class="option-checkbox" checked onchange="updateTestConfig()">
+                            <label for="load-performance">Производительность</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Настройки -->
+                <div class="test-settings">
+                    <h3>◆ Настройки запуска</h3>
+                    <div class="setting-item">
+                        <label for="test-timeout">Таймаут (сек):</label>
+                        <input type="number" id="test-timeout" value="300" min="60" max="3600" onchange="updateTestConfig()">
+                    </div>
+                    <div class="setting-item">
+                        <label for="test-verbose">Подробный вывод:</label>
+                        <input type="checkbox" id="test-verbose" checked onchange="updateTestConfig()">
+                    </div>
+                    <div class="setting-item">
+                        <label for="test-allure">Генерировать Allure:</label>
+                        <input type="checkbox" id="test-allure" checked onchange="updateTestConfig()">
+                    </div>
+                </div>
+
+                <!-- Кнопки управления -->
+                <div class="test-controls">
+                    <button class="btn btn-primary" onclick="selectAllTests()">✧ Выбрать все</button>
+                    <button class="btn btn-secondary" onclick="deselectAllTests()">◇ Снять все</button>
+                    <button class="btn btn-run" onclick="runTests()">⬡ Запустить тесты</button>
+                    <button class="btn btn-allure" id="btn-allure-report" onclick="openAllureReport()" style="display:none;">◈ Открыть Allure-отчёт</button>
+                </div>
+            </div>
+
+            <!-- Терминал для вывода результатов -->
+            <div class="terminal-container">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <span class="dot dot-red"></span>
+                        <span class="dot dot-yellow"></span>
+                        <span class="dot dot-green"></span>
+                    </div>
+                    <span class="terminal-title">✧ Терминал тестирования ✧</span>
+                    <button class="terminal-clear" onclick="clearTerminal()">◇ Очистить</button>
+                </div>
+                <div class="terminal-body" id="terminal">
+                    <div class="terminal-line">
+                        <span class="terminal-prompt">$</span>
+                        <span class="terminal-text">Добро пожаловать в конструктор тестов!</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="terminal-prompt">$</span>
+                        <span class="terminal-text">Выберите тесты и нажмите "Запустить"</span>
+                    </div>
+                </div>
+                <div class="terminal-input">
+                    <span class="terminal-prompt">$</span>
+                    <input type="text" id="terminal-input" placeholder="Введите команду..." onkeypress="handleTerminalInput(event)">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title">◉ Контакты</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">◈</div>
+                    <h3>Email</h3>
+                    <a href="mailto:elena@example.com">elena@example.com</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">◇</div>
+                    <h3>GitHub</h3>
+                    <a href="https://github.com/elena-qa" target="_blank">github.com/elena-qa</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">⬡</div>
+                    <h3>Telegram</h3>
+                    <a href="https://t.me/elena_qa" target="_blank">@elena_qa</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Бот -->
+    <div class="ai-bot-container" id="ai-bot">
+        <div class="ai-bot-header" onclick="toggleAiBot()">
+            <span class="ai-bot-icon">✧</span>
+            <span class="ai-bot-title">AI-ассистент</span>
+            <span class="ai-bot-toggle" id="ai-bot-toggle">▾</span>
+        </div>
+        <div class="ai-bot-body" id="ai-bot-body">
+            <div class="ai-bot-messages" id="ai-messages">
+                <div class="ai-message ai-message-bot">
+                    <span class="ai-message-icon">◈</span>
+                    <div class="ai-message-content">
+                        Привет! Я AI-ассистент. Могу рассказать о тестах, навыках или помочь с выбором тестов.
+                    </div>
+                </div>
+            </div>
+            <div class="ai-bot-input">
+                <input type="text" id="ai-input" placeholder="Задайте вопрос..." onkeypress="handleAiInput(event)">
+                <button onclick="sendAiMessage()">→</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
