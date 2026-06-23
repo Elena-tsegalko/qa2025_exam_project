@@ -8,6 +8,7 @@ on:
 
 jobs:
   tests_all:
+    name: ALL-Tests
     runs-on: ubuntu-latest
 
     steps:
