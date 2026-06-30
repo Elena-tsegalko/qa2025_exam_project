@@ -339,7 +339,7 @@ def main() -> None:
     ))
 
     # Запуск бота
-    print("🤖 Бот запущен!")
+    print("Bot started!")
     application.run_polling(allowed_updates=Update.ALL_TYPES)
 
 
