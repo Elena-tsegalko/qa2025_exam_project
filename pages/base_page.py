@@ -112,6 +112,10 @@ class WebPage(object):
 
         return source
 
+    def find_elements(self, by, value):
+        """ Поиск элементов на странице. """
+        return self._web_driver.find_elements(by, value)
+
     def check_js_errors(self, ignore_list=None):
         """ Эта функция проверяет ошибки JS на странице. """
 
